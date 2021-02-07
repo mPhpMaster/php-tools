@@ -1,0 +1,73 @@
+<?php
+
+namespace [% namespace %];
+
+use App\Models\Model;
+use Bkwld\Cloner\Cloneable;
+use App\Traits\Currencies;
+use App\Traits\HasName;
+use App\Traits\HasToArrayName;
+use App\Traits\HasDescription;
+use Illuminate\Notifications\Notifiable;
+use Sofa\Eloquence\Eloquence;
+use App\Traits\Media;
+
+class [% model_name_class %] extends Model
+{
+    use
+        // Cloneable,
+        // Currencies,
+        // Eloquence,
+        // Notifiable,
+        HasName,
+        // HasToArrayName,
+        // HasDescription,
+        // Media
+        ;
+
+[% time_stamps %]
+
+    protected $table = '[% table %]';
+
+[% primary_key %]
+
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [% fillable %];
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [% dates %];
+
+    /**
+     * Sortable columns.
+     *
+     * @var array
+     */
+    public $sortable = [% fillable %];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [% casts %];
+
+    /**
+     * Searchable rules.
+     *
+     * @var array
+     */
+    protected $searchableColumns = [% fillable %];
+
+
+[% relationships %]
+[% mutators %]
+[% accessors %]
+}

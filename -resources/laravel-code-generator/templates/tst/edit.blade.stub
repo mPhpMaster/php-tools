@@ -1,0 +1,76 @@
+@extends('layouts.admin')
+
+@section('title', (!empty([% model_header %]) ? [% model_header %] : '[% model_name_title %]'))
+
+@section('content')
+<div class="box box-success">
+    <div class="box-header with-border">
+        <div class="pull-left">{{ !empty([% model_header %]) ? [% model_header %] : '[% model_name_title %]' }}</div>
+        <div class="pull-right">
+            <span class="new-button">
+                <a href="{{ route('[% index_route_name %]') }}" class="btn btn-success btn-sm"><span class="fa fa-home"></span> &nbsp;[% show_all_models %]</a>
+            </span>
+            <span >
+                <a href="{{ route('[% create_route_name %]') }}" class="btn btn-success btn-sm"><span class="fa fa-home"></span> &nbsp;[% create_model %]</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- Default box -->
+    <div class="box box-success">
+
+        @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
+
+    {!! Form::model($[% model_name_singular_variable %], [
+        'method' => 'PATCH',
+        /*'method' => 'PUT',*/
+        'route' => ['[% update_route_name %]', $[% model_name_singular_variable %]->[% primary_key %]],
+        'role' => 'form',
+        'class' => 'form-loading-button',
+        /*'class' => 'form-horizontal',*/
+        'name' => '[% form_name %]',
+        'id' => '[% form_id %]',
+        [% upload_files %]
+    ]) !!}
+
+    @include ('[% form_view_name %]', ['[% model_name_singular_variable %]' => $[% model_name_singular_variable %],])
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @permission('update-[% model_name_slug %]')
+                {{ Form::saveButtons("[% update %]") }}
+                {{-- {!! Form::submit([% update %], ['class' => 'btn btn-primary']) !!} --}}
+            @endpermission
+        </div>
+    </div>
+
+    {!! Form::close() !!}
+
+
+    </div>
+</div>
+@endsection
+
+@push('js')
+    <script src="{{ asset('vendor/almasaeed2010/adminlte/plugins/iCheck/icheck.min.js') }}"></script>
+@endpush
+
+@push('css')
+    <link rel="stylesheet" href="{{ asset('vendor/almasaeed2010/adminlte/plugins/iCheck/square/green.css') }}">
+@endpush
+
+@push('scripts')
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#enabled_1').trigger('click');
+
+        $('#name').focus();
+    });
+</script>
+@endpush

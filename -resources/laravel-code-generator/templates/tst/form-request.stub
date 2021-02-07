@@ -1,0 +1,35 @@
+<?php
+
+namespace [% class_namespace %];
+
+use App\Http\Requests\Request;
+[% use_command_placeholder %]
+
+class [% form_request_class %] extends Request
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return [% autherized_boolean %];
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        $rules = [
+    [% validation_rules %]
+        ];
+[% file_validation_snippet %]
+        return $rules;
+    }
+    [% get_data_method %]
+[% upload_method %]
+}

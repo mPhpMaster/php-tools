@@ -1,0 +1,14 @@
+{
+    "name": "Artisany",
+    "alias": "artisany",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Artisany\\Providers\\ArtisanyServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

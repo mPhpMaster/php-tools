@@ -1,0 +1,133 @@
+<?php
+namespace DummyNamespace;
+
+use App\Zex\Abstracts\AbstractPrintHelperModel;
+use App\Zex\Interfaces\AbstractPrintHeplerModel;
+use App\Zex\Transformers\HelperTransformer;
+
+class DummyClass extends AbstractPrintHelperModel implements AbstractPrintHeplerModel
+{
+    protected $table = 'DummyTable';
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = [];
+
+    protected $dates = [
+        'deleted_at'
+    ];
+
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'currency_code',
+        'status_code',
+        'deleted_at',
+        'created_by',
+        'print_counter',
+    ];
+
+    protected $casts = [
+        'status_code'           => "date",
+        'deleted_at'            => "date",
+        'status_code'           => "date",
+        'print_counter'         => "integer",
+    ];
+
+    /**
+     * Sortable columns.
+     *
+     * @var array
+     */
+    public $sortable = [
+
+    ];
+
+    /**
+     * Searchable rules.
+     *
+     * @var array
+     */
+    protected $searchableColumns = [];
+
+    /**
+     * Clonable relationships.
+     *
+     * @var array
+     */
+    public $cloneable_relations = [];
+
+    // PrintHepler //
+    public function OnPrint()
+    {
+
+    }
+
+    /**
+     * get printhelper transformar class
+     *
+     * @return HelperTransformer
+     */
+    public function getPrintHeplerTransformer(): HelperTransformer
+    {
+        // return new \App\Zex\Transformers\DummyClass($this);
+    }
+    // PrintHepler //
+
+    public function currency()
+    {
+        return $this->belongsTo('App\Models\Setting\Currency', 'currency_code', 'code');
+    }
+
+    public function status()
+    {
+        return $this->belongsTo('App\Models\Income\InvoiceStatus', 'status_code', 'code');
+    }
+
+    public function createdBy()
+    {
+        return $this->belongsTo(User::class, 'created_by', 'id');
+    }
+
+    public function scopeCreatedBy($query, $user_id = null)
+    {
+        return $query->where('created_by', $user_id ? $user_id : AuthUser()->id);
+    }
+
+    /**
+     * add value to print_counter.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function changePrintCounter($value = "+1")
+    {
+        $value = HEngine::toNum($value);
+        $this->update([
+            'print_counter' => HMath("{$this->print_counter}+{$value}")
+        ]);
+        return $this;
+    }
+
+    /**
+     * Get the X Attribute.
+     *
+     * @return string
+     */
+    /*public function getAttribute( $value )
+    {
+        if (!empty($value) && !$this->X) {
+            return $value;
+        } elseif (!$this->X) {
+            return false;
+        }
+
+        return $this->X;
+    }*/
+}

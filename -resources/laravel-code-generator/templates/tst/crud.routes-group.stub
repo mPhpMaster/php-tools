@@ -1,0 +1,10 @@
+
+
+Route::group(['middleware' => ['web', 'language', 'auth', 'adminmenu', 'permission:read-admin-panel']], function () {
+
+
+    Route::group([ [% prefix %] 'as'=>'[% prefix_name %].' ], function () {
+[% routes %]
+    });
+
+});
