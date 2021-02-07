@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../btidenight/banantec_engine/engine/app/Http/Controllers/Api/Auth/RegistrationController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../btidenight/banantec_engine/engine/app/Http/Controllers/Api/Auth/VerificationController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../btidenight/banantec_engine/engine/composer.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../btidenight/banantec_engine/engine/config/auth.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.env" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Helpers/composer.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Helpers/src/DynamicObject.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Helpers/src/ExtraMacros.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Helpers/src/Facades/ExtraMacros.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Helpers/src/Middleware/DebuggerMiddleware.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Helpers/src/Traits/TForwardsStaticCallToInstance.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Helpers/src/Traits/TMacroable.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/BaseApiTrait.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/FractalableClass.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/HasAttributesWithCurrency.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/HasAttributesWithTrim.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/HasComments.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/HasMagicRelationsTrait.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/HasMultiLangueageColumns.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/PaginationDenial.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/RequestFilter.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Traits/THasExcludeData.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bootstrap/app.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/app.php" charset="UTF-8" />
+  </component>
+</project>

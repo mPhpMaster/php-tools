@@ -2,28 +2,35 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="erp.4myth.com">
+      <paths name="bridenight.banantec.com">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="ori">
+      <paths name="d">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="steamlabs">
+      <paths name="hlack">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="waslfood.4myth.com">
+      <paths name="saudims.banantec.com">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="serp.sarh">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

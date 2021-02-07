@@ -1,2 +1,0 @@
-                            {{--<th>[% field_title %]</th>--}}
-                        <th class="col-md-3">@sortablelink('[% field_name %]', crudTrans('[% field_name %]'))</th>

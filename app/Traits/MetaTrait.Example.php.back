@@ -1,0 +1,32 @@
+<?php
+
+namespace Modules\Tools\Traits;
+
+/**
+ * Class HackThursday Example for MetaData Trait
+ * @method string when
+ *
+ * @package Modules\Tools\Traits
+ */
+class HackThursday
+{
+    use MetaTrait;
+
+    /**
+     * @var string
+     */
+    private $dayOfWeek = 'Thursday';
+}
+
+$test = new HackThursday();
+$test->addMethod('when',
+    /**
+     * @return mixed
+     */
+    function () {
+        return $this->dayOfWeek;
+    }
+);
+
+
+echo $test->when();

@@ -1,4 +1,0 @@
-
-    //Route::group([ 'namespace'=>[% namespace %] ], function () {
-        Route::resource('[% model_name_singular_variable %]', '[% controller_name %]');
-    //});
