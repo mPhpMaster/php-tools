@@ -1,27 +1,57 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The Laravel Framework.",
+    "name": "mphpmaster/laravel-helpers",
+    "description": "Laravel hlaCk helpers",
+    "type": "library",
     "keywords": [
+        "php",
+        "hlack",
+        "tools",
         "framework",
         "laravel"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "mPhpMaster",
+            "email": "59211285+mPhpMaster@users.noreply.github.com"
+        }
+    ],
     "require": {
-        "php": "^7.2.5",
+        "php": ">=7.4",
+        "laravel/framework": "~5.8.0|^6.0|^7.0|^8.0",
+        "laravel/helpers": "~5.8.0|^6.0|^7.0|^8.0"
+    },
+    "more-require": {
+        "4myth/arabic-numbers": "^1.2",
+        "4myth/laravel-helpers": "^1.0",
+        "akaunting/setting": "^1.1",
+        "barryvdh/laravel-snappy": "^0.4.7",
         "fideloper/proxy": "^4.2",
-        "fruitcake/laravel-cors": "^1.0",
+        "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
-        "laravel/framework": "^7.0",
-        "laravel/helpers": "^1.2",
+        "h4cc/wkhtmltoimage-amd64": "^0.12.4",
+        "h4cc/wkhtmltopdf-amd64": "^0.12.4",
+        "hlack/promises": "^2.0",
+        "illuminate/pipeline": "^7",
+        "laravel/passport": "^9.2",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.0"
+        "laravel/ui": "^2.0",
+        "maatwebsite/excel": "^3.1",
+        "mehdi-fathi/eloquent-filter": "^2.3",
+        "mohammad-fouladgar/eloquent-builder": "^2.3",
+        "spatie/laravel-medialibrary": "^8.3"
     },
     "require-dev": {
+        "ext-fileinfo": "*",
+        "ext-json": "*",
+        "ext-pdo_sqlite": "*",
+        "ext-zip": "*",
+        "barryvdh/laravel-ide-helper": "^2.7",
         "facade/ignition": "^2.0",
         "fzaninotto/faker": "^1.9.1",
         "mockery/mockery": "^1.3.1",
         "nunomaduro/collision": "^4.1",
+        "nunomaduro/laravel-desktop-notifier": "^2.5",
         "phpunit/phpunit": "^8.5"
     },
     "config": {
@@ -31,7 +61,10 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [],
+            "providers": [
+                "mPhpMaster\\Support\\Providers\\MPhpMasterHelpersProvider"
+            ]
         }
     },
     "autoload": {
@@ -60,7 +93,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "composer helpers"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
@@ -69,6 +103,40 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "composer helpers"
+        ],
+        "new": [
+            "@php -r \"define('FILE', '.env'); if(@file_exists(FILE)==false) { @copy(FILE . '.example', FILE); echo('php artisan key:generate --ansi'); }\" | sh",
+            "@php artisan ss -s",
+            "composer c:c",
+            "composer dumpautoload"
+        ],
+        "helpers": [
+            "echo off",
+            "@php -r \"define('FILE', '.phpstorm.meta.php'); @file_exists(FILE) && print('  ---------- ' . FILE . ' Exists' . PHP_EOL);\"",
+            "@php -r \"define('FILE', '_ide_helper.php'); @file_exists(FILE) && print('  ---------- ' . FILE . ' Exists' . PHP_EOL);\"",
+            "@php -r \"define('FILE', '_ide_helper_models.php'); @file_exists(FILE) && print('  ---------- ' . FILE . ' Exists' . PHP_EOL);\"",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:model -N --dir=app --dir=app/*.php --dir=app/*/*.php --dir=app/*/*/*.php --dir=app/*/*/*.php",
+            "@php artisan ide-helper:eloquent"
+        ],
+        "c:c": [
+            "@php artisan cache:clear",
+            "@php artisan route:clear",
+            "@php artisan config:clear",
+            "@php artisan view:clear"
+        ],
+        "m:c": [
+            "mkdir -p storage/framework/{sessions,views,cache}",
+            "chmod -R 775 storage/framework",
+            "chown -R `whoami`:nobody storage/framework"
+        ],
+        "a:routes": [
+            "@php artisan route:list --no-ansi > routes.txt"
         ]
     }
 }
