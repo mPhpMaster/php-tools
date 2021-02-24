@@ -25,12 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4737f8b4-fd76-4029-9915-751a36000526" name="Default Changelist" comment="add merge + add + all + toArray to DynamicObject">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/src/Helpers.functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4737f8b4-fd76-4029-9915-751a36000526" name="Default Changelist" comment="update:&#10;config/app.php / aliases&#10;&#10;add:&#10;Helpers.functions.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +187,7 @@
     <MESSAGE value="fix path" />
     <MESSAGE value="add DynamicObject" />
     <MESSAGE value="add merge + add + all + toArray to DynamicObject" />
-    <option name="LAST_COMMIT_MESSAGE" value="add merge + add + all + toArray to DynamicObject" />
+    <MESSAGE value="update:&#10;config/app.php / aliases&#10;&#10;add:&#10;Helpers.functions.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="update:&#10;config/app.php / aliases&#10;&#10;add:&#10;Helpers.functions.php" />
   </component>
 </project>
