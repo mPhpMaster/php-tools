@@ -228,6 +228,13 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'AppModel' => \App\Models\Model::class,
+        'Model' => getModelAbstractClass(),//\AppModel::class,
+        'AuthUser'  => \Illuminate\Foundation\Auth\User::class,
+//        'User'  => \App\Models\User::class,
+        'User'  => \App\User::class,
+        'DynamicObject' => \mPhpMaster\Support\DynamicObject::class,
+
     ],
 
 ];

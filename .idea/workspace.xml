@@ -26,8 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4737f8b4-fd76-4029-9915-751a36000526" name="Default Changelist" comment="add merge + add + all + toArray to DynamicObject">
-      <change beforePath="$PROJECT_DIR$/Helpers/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/src/Helpers/src/Getters.functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/src/Helpers/src/Getters.functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helpers/src/Helpers.functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +55,11 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Helpers" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -62,7 +68,11 @@
       </set>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4.7" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4.7">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1eJikbsriNEaSqB7fr11jJZSAm1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -73,19 +83,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Helpers/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Helpers/src/Helpers" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\AppServ\www\php-tools\Helpers\src\Helpers" />
+      <recent name="H:\AppServ\www\php-tools\app\" />
+      <recent name="H:\AppServ\www\php-tools\app\Helpers\src" />
       <recent name="H:\AppServ\www\laravel-helpers\Helpers\src" />
       <recent name="H:\AppServ\www\laravel-helpers\Helpers\src\Middleware" />
-      <recent name="H:\AppServ\www\laravel-helpers\app\Helpers\src" />
-      <recent name="H:\AppServ\www\laravel-helpers\Helpers\src\Traits" />
-      <recent name="H:\AppServ\www\laravel-helpers\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\AppServ\www\php-tools\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -94,6 +108,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -144,7 +159,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -177,55 +192,5 @@
     <MESSAGE value="add DynamicObject" />
     <MESSAGE value="add merge + add + all + toArray to DynamicObject" />
     <option name="LAST_COMMIT_MESSAGE" value="add merge + add + all + toArray to DynamicObject" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594049660429">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594049660429" />
-    <state x="738" y="432" key="ComposerInitDialogKey" timestamp="1594721684559">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="738" y="432" key="ComposerInitDialogKey/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594721684559" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1594723408011">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594723408011" />
-    <state x="184" y="85" key="MergeDialog" timestamp="1594723308580">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="85" key="MergeDialog/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594723308580" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1594050341910">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594050341910" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1594723373757">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594723373757" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1594065088201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594065088201" />
-    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594723324046">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594723324046" />
-    <state x="667" y="254" width="587" height="534" key="find.popup" timestamp="1594719736131">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="254" width="587" height="534" key="find.popup/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594719736131" />
-    <state x="661" y="308" key="git4idea.merge.GitPullDialog" timestamp="1594723249370">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="661" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594723249370" />
-    <state width="681" height="360" key="javadoc.popup.new" timestamp="1594050026591">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="681" height="360" key="javadoc.popup.new/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594050026591" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1594721730062">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.768.1121@0.0.1920.1040" timestamp="1594721730062" />
   </component>
 </project>
